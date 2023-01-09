@@ -9,3 +9,7 @@ h1 {
 h2{
   background-color: papayawhip;
 }
+
+h3 {
+  text-transform: uppercase;
+}
