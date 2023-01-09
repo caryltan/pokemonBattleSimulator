@@ -1,0 +1,48 @@
+.opponent{
+    display: flex;
+    flex-basis: 100%;
+    min-height: 150px;  
+}
+
+.opponentName {
+    background-color: peachpuff;
+    flex-basis: 50%;
+}
+
+.opponentSprite{
+    background-color: blue;
+    flex-basis: 50%;
+}
+
+.user {
+    display: flex;
+    flex-basis: 100%;
+    min-height: 150px;
+}
+
+
+.userName {
+    background-color: peachpuff;
+    flex-basis: 50%;
+}
+
+.userSprite {
+    background-color: blue;
+    flex-basis: 50%;
+
+}
+
+.battle{
+    display: flex;
+    flex-basis: 100%;   
+}
+
+.randomize{
+    background-color: peachpuff;
+    flex-basis: 50%;
+}
+
+.fight{
+    background-color: blue;
+    flex-basis: 50%;
+}
