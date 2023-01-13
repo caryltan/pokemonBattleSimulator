@@ -349,6 +349,46 @@ html {
   display: block;
 }
 
+@-webkit-keyframes fa-solid {
+  /* start of animation */
+  0% {
+    bottom: 70%;
+    right: 70%;
+  }
+  /* end of animation  */
+  100% {
+    bottom: 83%;
+    right: 25%;
+    opacity: 0%;
+  }
+}
+
+@keyframes fa-solid {
+  /* start of animation */
+  0% {
+    bottom: 70%;
+    right: 70%;
+  }
+  /* end of animation  */
+  100% {
+    bottom: 83%;
+    right: 25%;
+    opacity: 0%;
+  }
+}
+.fa-heart, .fa-bolt, .fa-droplet, .fa-fire {
+  position: absolute;
+  display: none;
+}
+.fa-heart.textAppear, .fa-bolt.textAppear, .fa-droplet.textAppear, .fa-fire.textAppear {
+  display: block;
+  -webkit-animation: fa-solid 2.5s 1;
+          animation: fa-solid 2.5s 1;
+  font-size: 3rem;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
 @media (min-width: 900px) {
   .opponent, .user {
     height: 25vh;
