@@ -62,18 +62,18 @@
         }
 }
 
-.fightTextVisible{
+.textVisible{
     display: block;
 }
 
-.goBackVisible{
+.textInvisible {
+    display: none;
+}
+
+.backInvisible {
+    display: none;
+}
+
+.textAppear {
     display: block;
-}
-
-.fightTextInvisible {
-    display: none;
-}
-
-.goBackInvisible {
-    display: none;
 }
