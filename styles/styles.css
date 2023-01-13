@@ -302,6 +302,44 @@ html {
       flex-basis: 50%;
 }
 
+.fightBoxContainer {
+  display: none;
+}
+
+.fightBoxContainerOpen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  min-height: 150px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.fightBoxContainerOpen div {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.fightTextVisible {
+  display: block;
+}
+
+.goBackVisible {
+  display: block;
+}
+
+.fightTextInvisible {
+  display: none;
+}
+
+.goBackInvisible {
+  display: none;
+}
+
 @media (min-width: 900px) {
   .opponent, .user {
     height: 25vh;

@@ -46,3 +46,34 @@
     background-color: blue;
     flex-basis: 50%;
 }
+
+.fightBoxContainer{
+    display: none;
+}
+
+.fightBoxContainerOpen{
+    display: flex;
+        flex-basis: 100%;
+        min-height: 150px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        div {
+            flex-basis: 50%;
+        }
+}
+
+.fightTextVisible{
+    display: block;
+}
+
+.goBackVisible{
+    display: block;
+}
+
+.fightTextInvisible {
+    display: none;
+}
+
+.goBackInvisible {
+    display: none;
+}
