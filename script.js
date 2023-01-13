@@ -138,6 +138,27 @@ decideOutcome.addEventListener('click', function(event2){
   }
 });
 
+const moveOneAnimation = document.querySelector('#moveOne')
+moveOneAnimation.addEventListener('click', function(event3){
+  const animationOne = document.querySelector(".fa-heart")
+  animationOne.classList.toggle("textAppear")
+});
+const moveTwoAnimation = document.querySelector('#moveTwo')
+moveTwoAnimation.addEventListener('click', function(event4){
+  const animationTwo = document.querySelector(".fa-bolt")
+  animationTwo.classList.toggle("textAppear")
+});
+const moveThreeAnimation = document.querySelector('#moveThree')
+moveThreeAnimation.addEventListener('click', function(event5){
+  const animationThree = document.querySelector(".fa-droplet")
+  animationThree.classList.toggle("textAppear")
+});
+const moveFourAnimation = document.querySelector('#moveFour')
+moveFourAnimation.addEventListener('click', function(event6){
+  const animationFour = document.querySelector(".fa-fire")
+  animationFour.classList.toggle("textAppear")
+});
+
 pokemonSimulator.init = function() {
   pokemonSimulator.getPokemonName();
 }
