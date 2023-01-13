@@ -324,20 +324,20 @@ html {
       flex-basis: 50%;
 }
 
-.fightTextVisible {
+.textVisible {
   display: block;
 }
 
-.goBackVisible {
+.textInvisible {
+  display: none;
+}
+
+.backInvisible {
+  display: none;
+}
+
+.textAppear {
   display: block;
-}
-
-.fightTextInvisible {
-  display: none;
-}
-
-.goBackInvisible {
-  display: none;
 }
 
 @media (min-width: 900px) {

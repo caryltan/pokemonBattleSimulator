@@ -18,7 +18,9 @@ pokemonSimulator.getPokemonName = function(){
     }).then(data => {
       document.querySelector('#opponentName').innerHTML='';
       document.querySelector('#opponentSprite').innerHTML='';
+      //pokemon name
       pokemonSimulator.displayOpponentName(data.species.name)
+      //pokemon sprite
       pokemonSimulator.displayOpponentSprite(data.sprites.front_default)
     })
     fetch(userUrl)
@@ -27,8 +29,16 @@ pokemonSimulator.getPokemonName = function(){
     }).then(data => {
       document.querySelector('#userName').innerHTML='';
       document.querySelector('#userSprite').innerHTML='';
+      //pokemon name
       pokemonSimulator.displayUserName(data.species.name)
+      //pokemon sprite
       pokemonSimulator.displayUserSprite(data.sprites.back_default)
+      //pokemon moves
+      pokemonSimulator.displayUserMovesOne(data.moves[0].move.name)
+      pokemonSimulator.displayUserMovesTwo(data.moves[1].move.name)
+      pokemonSimulator.displayUserMovesThree(data.moves[2].move.name)
+      pokemonSimulator.displayUserMovesFour(data.moves[3].move.name)
+      // console.log(data.moves[0].move.name)
     })
 }
 
@@ -61,6 +71,28 @@ pokemonSimulator.displayUserSprite = function(sprite){
   document.querySelector('#userSprite').appendChild(userSpriteObject);
 }
 
+//pokemon moves
+pokemonSimulator.displayUserMovesOne = function(moves){
+  const userMoveOne = document.createElement('h2');
+  userMoveOne.innerText = moves;
+  document.querySelector('#moveOne').appendChild(userMoveOne);
+}
+pokemonSimulator.displayUserMovesTwo = function(moves){
+  const userMoveTwo = document.createElement('h2');
+  userMoveTwo.innerText = moves;
+  document.querySelector('#moveTwo').appendChild(userMoveTwo);
+}
+pokemonSimulator.displayUserMovesThree = function(moves){
+  const userMoveThree = document.createElement('h2');
+  userMoveThree.innerText = moves;
+  document.querySelector('#moveThree').appendChild(userMoveThree);
+}
+pokemonSimulator.displayUserMovesFour = function(moves){
+  const userMoveFour = document.createElement('h2');
+  userMoveFour.innerText = moves;
+  document.querySelector('#moveFour').appendChild(userMoveFour);
+}
+
 //Event listener to randomize pokemon(refresh page)
 
 const pageRefresh = document.querySelector('#randomize')
@@ -70,16 +102,19 @@ pageRefresh.addEventListener('click', function(event){
 
 
 //  Fightbox Toggle
-
 const fightRefresh = document.querySelector('#fight')
 fightRefresh.addEventListener('click', function (event1) {
+  //open fight box and make visible to page
   const fightBox = document.querySelector(".fightBoxContainer")
   fightBox.classList.toggle("fightBoxContainerOpen")
-  // const fightText = document.getElementById("fightText")
-  // fightText.classList.toggle("fightTextVisible")
-  // const goBackText = document.getElementById("goBackText")
-  // goBackText.classList.toggle("goBackVisible")
-  
+
+  //make "fight" in h2 invisible and toggle between two states
+  const fightText = document.querySelector(".textVisible")
+  fightText.classList.toggle("textInvisible")
+
+  //make "go back" in h2 visible and toggle between two states
+  const goBackText = document.querySelector(".backInvisible")
+  goBackText.classList.toggle("textAppear")  
 });
 
 
