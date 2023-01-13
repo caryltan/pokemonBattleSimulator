@@ -38,7 +38,6 @@ pokemonSimulator.getPokemonName = function(){
       pokemonSimulator.displayUserMovesTwo(data.moves[1].move.name)
       pokemonSimulator.displayUserMovesThree(data.moves[2].move.name)
       pokemonSimulator.displayUserMovesFour(data.moves[3].move.name)
-      // console.log(data.moves[0].move.name)
     })
 }
 
@@ -94,19 +93,26 @@ pokemonSimulator.displayUserMovesFour = function(moves){
 }
 
 //Event listener to randomize pokemon(refresh page)
-
 const pageRefresh = document.querySelector('#randomize')
 pageRefresh.addEventListener('click', function(event){
   location.reload();
 });
 
-
 //  Fightbox Toggle
 const fightRefresh = document.querySelector('#fight')
 fightRefresh.addEventListener('click', function (event1) {
-  //open fight box and make visible to page
-  const fightBox = document.querySelector(".fightBoxContainer")
-  fightBox.classList.toggle("fightBoxContainerOpen")
+  // open fight box and make visible to page
+  // const fightBox = document.querySelector(".fightBoxContainer")
+  // fightBox.classList.toggle("fightBoxContainerOpen")
+
+  const moveAppearOne = document.querySelector(".moveOne")
+  moveAppearOne.classList.toggle("textAppear")
+  const moveAppearTwo = document.querySelector(".moveTwo")
+  moveAppearTwo.classList.toggle("textAppear")
+  const moveAppearThree = document.querySelector(".moveThree")
+  moveAppearThree.classList.toggle("textAppear")
+  const moveAppearFour = document.querySelector(".moveFour")
+  moveAppearFour.classList.toggle("textAppear")
 
   //make "fight" in h2 invisible and toggle between two states
   const fightText = document.querySelector(".textVisible")
@@ -114,25 +120,23 @@ fightRefresh.addEventListener('click', function (event1) {
 
   //make "go back" in h2 visible and toggle between two states
   const goBackText = document.querySelector(".backInvisible")
-  goBackText.classList.toggle("textAppear")  
+  goBackText.classList.toggle("textAppear")
 });
 
-
-
-//   const fightToggle = document.querySelector("#fight")
-//     fightToggle.toggle(){
-//     if (fightToggle.innerHTML=="Fight"){
-//       fightToggle.innerHTML="Go Back";
-//     } else {
-//       fightToggle.innerHTML= "Fight";
-//     } 
-//   }
-// });
-
-// goBackInvisible
-// fightTextVisible
-
-
+const decideOutcome = document.querySelector('#decideWinner')
+decideOutcome.addEventListener('click', function(event2){
+  //decide winner based on Type advantage
+  const outcome = document.querySelector("#winnerText");
+  randomizedOutcome = getRandom(0,2)
+  console.log(randomizedOutcome)
+  if (randomizedOutcome == 0) {
+    outcome.innerText = "Opponent wins!"
+    console.log("opponent")
+  } else {
+    outcome.innerText = "User wins!"
+    console.log("user")
+  }
+});
 
 pokemonSimulator.init = function() {
   pokemonSimulator.getPokemonName();

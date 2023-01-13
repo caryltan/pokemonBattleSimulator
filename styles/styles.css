@@ -292,6 +292,12 @@ html {
 
 .randomize {
   background-color: peachpuff;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.decideWinner {
+  background-color: peachpuff;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
 }
@@ -303,10 +309,6 @@ html {
 }
 
 .fightBoxContainer {
-  display: none;
-}
-
-.fightBoxContainerOpen {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -319,7 +321,7 @@ html {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.fightBoxContainerOpen div {
+.fightBoxContainer div {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
 }
@@ -337,6 +339,13 @@ html {
 }
 
 .textAppear {
+  display: block;
+}
+
+.moveOne, .moveTwo, .moveThree, .moveFour {
+  display: none;
+}
+.moveOne.textAppear, .moveTwo.textAppear, .moveThree.textAppear, .moveFour.textAppear {
   display: block;
 }
 
