@@ -39,6 +39,11 @@
 
 .randomize{
     background-color: peachpuff;
+    flex-basis: 100%;
+}
+
+.decideWinner{
+    background-color: peachpuff;
     flex-basis: 50%;
 }
 
@@ -47,11 +52,22 @@
     flex-basis: 50%;
 }
 
-.fightBoxContainer{
-    display: none;
-}
+// .fightBoxContainer{
+//     display: none;
+// }
 
-.fightBoxContainerOpen{
+// .fightBoxContainerOpen{
+//     display: flex;
+//         flex-basis: 100%;
+//         min-height: 150px;
+//         justify-content: space-between;
+//         flex-wrap: wrap;
+//         div {
+//             flex-basis: 50%;
+//         }
+// }
+
+.fightBoxContainer{
     display: flex;
         flex-basis: 100%;
         min-height: 150px;
@@ -76,4 +92,12 @@
 
 .textAppear {
     display: block;
+}
+
+
+.moveOne, .moveTwo , .moveThree, .moveFour {
+    display: none;
+    &.textAppear {
+        display: block;
+    }
 }
