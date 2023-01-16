@@ -125,38 +125,58 @@ fightRefresh.addEventListener('click', function (event1) {
 
 const decideOutcome = document.querySelector('#decideWinner')
 decideOutcome.addEventListener('click', function(event2){
-  //decide winner based on Type advantage
+  //decide winner randomly
   const outcome = document.querySelector("#winnerText");
   randomizedOutcome = getRandom(0,2)
-  console.log(randomizedOutcome)
   if (randomizedOutcome == 0) {
     outcome.innerText = "Opponent wins!"
-    console.log("opponent")
   } else {
     outcome.innerText = "User wins!"
-    console.log("user")
   }
 });
 
+//move animations
+//---
+//moveOne animation
 const moveOneAnimation = document.querySelector('#moveOne')
 moveOneAnimation.addEventListener('click', function(event3){
-  const animationOne = document.querySelector(".fa-heart")
-  animationOne.classList.toggle("textAppear")
+  const animationOne = document.querySelector(".fa-heart");
+  animationOne.classList.add("textAppear");
+//timer to remove classlist
+  setTimeout(function(moveOneAnimation) {
+    animationOne.classList.remove("textAppear");
+  }, 1000);
+
 });
+//moveTwo animation
 const moveTwoAnimation = document.querySelector('#moveTwo')
 moveTwoAnimation.addEventListener('click', function(event4){
   const animationTwo = document.querySelector(".fa-bolt")
-  animationTwo.classList.toggle("textAppear")
+  animationTwo.classList.add("textAppear")
+  // timer to remove classlist
+  setTimeout(function(moveTwoAnimation) {
+    animationTwo.classList.remove("textAppear");
+  }, 1000);
 });
+//moveThree animation
 const moveThreeAnimation = document.querySelector('#moveThree')
 moveThreeAnimation.addEventListener('click', function(event5){
   const animationThree = document.querySelector(".fa-droplet")
-  animationThree.classList.toggle("textAppear")
+  animationThree.classList.add("textAppear")
+  //timer to remove classlist
+  setTimeout(function(moveThreeAnimation) {
+    animationThree.classList.remove("textAppear");
+  }, 1000);
 });
+//moveFour animation
 const moveFourAnimation = document.querySelector('#moveFour')
 moveFourAnimation.addEventListener('click', function(event6){
   const animationFour = document.querySelector(".fa-fire")
-  animationFour.classList.toggle("textAppear")
+  animationFour.classList.add("textAppear")
+  //timer to remove classlist
+  setTimeout(function(moveOneAnimation) {
+    animationFour.classList.remove("textAppear");
+  }, 1000);
 });
 
 pokemonSimulator.init = function() {
