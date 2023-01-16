@@ -1,6 +1,14 @@
 @media (min-width:900px){
+    .wrapper{
+        background-position: center;
+    }
     .opponent, .user{
         height: 25vh;
-    }
+    };
+    .userName, .opponentName{
+        h2{
+            width: 50%;
+        };
+    };
+};
 
-}
