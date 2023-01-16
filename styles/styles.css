@@ -234,31 +234,25 @@ html {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  background-image: url(../assets/battlebackground1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 html {
   text-align: center;
-}
-
-.opponent {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  min-height: 150px;
-}
-
-.opponentName {
-  background-color: peachpuff;
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  text-transform: uppercase;
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  letter-spacing: 4px;
 }
 
 .opponentSprite {
-  background-color: blue;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
+}
+.opponentSprite img {
+  min-height: 200px;
 }
 
 .user {
@@ -267,19 +261,46 @@ html {
   display: flex;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  min-height: 150px;
+  min-height: 200px;
+}
+
+.opponent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  min-height: 200px;
 }
 
 .userName {
-  background-color: peachpuff;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
 }
+.userName h2 {
+  background-color: white;
+  margin: auto;
+  top: 40%;
+  position: relative;
+}
 
-.userSprite {
-  background-color: blue;
+.opponentName {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
+}
+.opponentName h2 {
+  background-color: white;
+  margin: auto;
+  top: 40%;
+  position: relative;
+}
+
+.userSprite {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+.userSprite img {
+  min-height: 200px;
 }
 
 .battle {
@@ -288,27 +309,37 @@ html {
   display: flex;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+  background-color: white;
+  -webkit-box-shadow: 0 0 2px 5px rgb(255, 182, 193), 2px 2px 2px 5px red;
+          box-shadow: 0 0 2px 5px rgb(255, 182, 193), 2px 2px 2px 5px red;
+}
+.battle .decideWinner {
+  border-right: 4px solid rgb(255, 182, 193);
 }
 
 .randomize {
-  background-color: peachpuff;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+  background-color: rgba(90, 90, 90, 0.75);
+}
+.randomize h2 {
+  color: rgb(225, 217, 209);
 }
 
 .decideWinner {
-  background-color: peachpuff;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
 }
 
 .fight {
-  background-color: blue;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
 }
 
 .fightBoxContainer {
+  background-color: rgb(255, 211, 233);
+  -webkit-box-shadow: 0 0 2px 5px rgb(255, 182, 193), 2px 2px 2px 5px red;
+          box-shadow: 0 0 2px 5px rgb(255, 182, 193), 2px 2px 2px 5px red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -347,6 +378,19 @@ html {
 }
 .moveOne.textAppear, .moveTwo.textAppear, .moveThree.textAppear, .moveFour.textAppear {
   display: block;
+}
+
+.moveOne {
+  border-right: 4px solid rgb(255, 182, 193);
+  border-bottom: 4px solid rgb(255, 182, 193);
+}
+
+.moveTwo {
+  border-bottom: 4px solid rgb(255, 182, 193);
+}
+
+.moveThree {
+  border-right: 4px solid rgb(255, 182, 193);
 }
 
 @-webkit-keyframes fa-solid {
@@ -389,8 +433,18 @@ html {
           animation-fill-mode: forwards;
 }
 
+footer {
+  margin-top: 75px;
+}
+
 @media (min-width: 900px) {
+  .wrapper {
+    background-position: center;
+  }
   .opponent, .user {
     height: 25vh;
+  }
+  .userName h2, .opponentName h2 {
+    width: 50%;
   }
 }
