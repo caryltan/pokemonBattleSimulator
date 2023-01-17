@@ -5,7 +5,6 @@ const pokemonSimulator = {};
 //create method that requests the API information
         //url constructor to specify parameters we are including in API endpoint
             //NOTE: https://pokeapi.co/api/v2/pokemon/{id or name}/to target pokemon 
-// const pokemonFetch = fetch(pokemonURL);
 
 pokemonSimulator.getPokemonName = function(){
   let opponentId = getRandom(0,151);
@@ -18,9 +17,9 @@ pokemonSimulator.getPokemonName = function(){
     }).then(data => {
       document.querySelector('#opponentName').innerHTML='';
       document.querySelector('#opponentSprite').innerHTML='';
-      //pokemon name
+      //Opponent pokemon name
       pokemonSimulator.displayOpponentName(data.species.name)
-      //pokemon sprite
+      //Opponent pokemon sprite
       pokemonSimulator.displayOpponentSprite(data.sprites.front_default)
     })
     fetch(userUrl)
@@ -29,11 +28,11 @@ pokemonSimulator.getPokemonName = function(){
     }).then(data => {
       document.querySelector('#userName').innerHTML='';
       document.querySelector('#userSprite').innerHTML='';
-      //pokemon name
+      //User pokemon name
       pokemonSimulator.displayUserName(data.species.name)
-      //pokemon sprite
+      //User pokemon sprite
       pokemonSimulator.displayUserSprite(data.sprites.back_default)
-      //pokemon moves
+      //User pokemon moves
       pokemonSimulator.displayUserMovesOne(data.moves[0].move.name)
       pokemonSimulator.displayUserMovesTwo(data.moves[1].move.name)
       pokemonSimulator.displayUserMovesThree(data.moves[2].move.name)
@@ -48,22 +47,25 @@ function getRandom(min, max){
   return Math.floor(Math.random() * (max - min) + min);
 };
 
+//display Opponent Name
 pokemonSimulator.displayOpponentName = function(name){
     const opponentNameObject = document.createElement('h2');
     opponentNameObject.innerText = name;
     document.querySelector('#opponentName').appendChild(opponentNameObject);
 }
+//display User Name
 pokemonSimulator.displayUserName = function(name){
   const userNameObject = document.createElement('h2');
   userNameObject.innerText = name;
   document.querySelector('#userName').appendChild(userNameObject);
 }
-
+//display Opponent Sprite
 pokemonSimulator.displayOpponentSprite = function(sprite){
   const opponentSpriteObject = document.createElement('img');
   opponentSpriteObject.src = sprite;
   document.querySelector('#opponentSprite').appendChild(opponentSpriteObject);
 }
+//display user Sprite
 pokemonSimulator.displayUserSprite = function(sprite){
   const userSpriteObject = document.createElement('img');
   userSpriteObject.src = sprite;
@@ -71,21 +73,25 @@ pokemonSimulator.displayUserSprite = function(sprite){
 }
 
 //pokemon moves
+//move one
 pokemonSimulator.displayUserMovesOne = function(moves){
   const userMoveOne = document.createElement('h2');
   userMoveOne.innerText = moves;
   document.querySelector('#moveOne').appendChild(userMoveOne);
 }
+//move two
 pokemonSimulator.displayUserMovesTwo = function(moves){
   const userMoveTwo = document.createElement('h2');
   userMoveTwo.innerText = moves;
   document.querySelector('#moveTwo').appendChild(userMoveTwo);
 }
+//move three
 pokemonSimulator.displayUserMovesThree = function(moves){
   const userMoveThree = document.createElement('h2');
   userMoveThree.innerText = moves;
   document.querySelector('#moveThree').appendChild(userMoveThree);
 }
+//move four
 pokemonSimulator.displayUserMovesFour = function(moves){
   const userMoveFour = document.createElement('h2');
   userMoveFour.innerText = moves;
@@ -123,6 +129,7 @@ fightRefresh.addEventListener('click', function (event1) {
   goBackText.classList.toggle("textAppear")
 });
 
+//decide winnner
 const decideOutcome = document.querySelector('#decideWinner')
 decideOutcome.addEventListener('click', function(event2){
   //decide winner randomly

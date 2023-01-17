@@ -2,20 +2,20 @@
     flex-basis: 50%;
     img{
         min-height: 200px;
-    };
-};
+    }
+}
 
 .user {
     display: flex;
     flex-basis: 100%;
     min-height: 200px;
-};
+}
 
 .opponent {
     display: flex;
     flex-basis: 100%;
     min-height: 200px;
-};
+}
 
 .userName {
     flex-basis: 50%;
@@ -24,8 +24,8 @@
         margin: auto;
         top: 40%;
         position: relative;
-    };
-};
+    }
+}
 
 .opponentName {
     flex-basis: 50%;
@@ -34,15 +34,15 @@
         margin: auto;
         top: 40%;
         position: relative;
-    };
-};
+    }
+}
 
 .userSprite {
     flex-basis: 50%;
     img{
         min-height: 200px;
-    };
-};
+    }
+}
 
 .battle{
     display: flex;
@@ -52,33 +52,35 @@
         0 0 2px 5px rgb(255, 182, 193),
         2px 2px 2px 5px red;
     .decideWinner{
-        border-right: 4px solid rgb(255, 182, 193);
+        border-right: 4px solid rgb(255, 182, 193)
     }
-
-};
+}
 
 .randomize{
     flex-basis: 100%;
     background-color: rgba(90, 90, 90, 75%);
     h2{
         color: rgb(225 217 209);
-    };
-};
+        &:hover, &:focus {
+            color: black;
+        }
+    }
+}
 
 .decideWinner{
     flex-basis: 50%;
-};
+}
 
 .fight{
     // background-color: blue;
     flex-basis: 50%;
-};
+}
 
 .fightBoxContainer{
-    background-color: rgb(255,211,233,) ;
+    background-color: rgb(255,211,233) ;
     box-shadow:
-    0 0 2px 5px rgb(255, 182, 193) , 
-    2px 2px 2px 5px red;
+        0 0 2px 5px rgb(255, 182, 193), 
+        2px 2px 2px 5px red;
     display: flex;
         flex-basis: 100%;
         min-height: 150px;
@@ -86,66 +88,41 @@
         flex-wrap: wrap;
         div {
             flex-basis: 50%;
-        };
-};
+        }
+}
 
 .textVisible{
     display: block;
-};
+}
 
 .textInvisible {
     display: none;
-};
+}
 
 .backInvisible {
     display: none;
-};
+}
 
 .textAppear {
     display: block;
-};
+}
 
 .moveOne, .moveTwo , .moveThree, .moveFour {
     display: none;
     &.textAppear {
         display: block;
     }
-};
+}
 
 .moveOne{
     border-right: 4px solid rgb(255, 182, 193);
     border-bottom: 4px solid rgb(255, 182, 193);    
-};
+}
 
 .moveTwo{
     border-bottom: 4px solid rgb(255, 182, 193);
-};
+}
 
 .moveThree{
     border-right: 4px solid rgb(255, 182, 193);
-};
-
-@keyframes fa-solid {
-    /* start of animation */
-    0% {
-        bottom: 70%;
-        right: 70%;
-    }
-    /* end of animation  */
-    100% {
-        bottom: 83%;
-        right: 25%;
-        opacity: 0%;
-    };
-};
-
-.fa-heart, .fa-bolt, .fa-droplet, .fa-fire{
-    position: absolute;
-    display: none;
-    &.textAppear{
-        display: block;
-        animation: fa-solid 2.5s 1;
-        font-size: 3rem;
-        animation-fill-mode: forwards;
-    };
-};
+}
