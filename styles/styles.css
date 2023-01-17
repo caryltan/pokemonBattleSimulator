@@ -237,6 +237,8 @@ html {
   background-image: url(../assets/battlebackground1.png);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: -120px;
 }
 
 html {
@@ -325,6 +327,9 @@ html {
 .randomize h2 {
   color: rgb(225, 217, 209);
 }
+.randomize h2:hover, .randomize h2:focus {
+  color: black;
+}
 
 .decideWinner {
   -ms-flex-preferred-size: 50%;
@@ -393,30 +398,71 @@ html {
   border-right: 4px solid rgb(255, 182, 193);
 }
 
+footer {
+  margin-top: 75px;
+}
+
+@media (min-width: 900px) {
+  .wrapper {
+    background-position: center;
+    background-position-y: -150px;
+  }
+  .opponent, .user {
+    height: 25vh;
+  }
+  .userName h2, .opponentName h2 {
+    width: 50%;
+  }
+  @-webkit-keyframes fa-solid {
+    /* start of animation */
+    0% {
+      bottom: 50%;
+      right: 70%;
+    }
+    /* end of animation  */
+    100% {
+      bottom: 90%;
+      right: 30%;
+      opacity: 0%;
+    }
+  }
+  @keyframes fa-solid {
+    /* start of animation */
+    0% {
+      bottom: 50%;
+      right: 70%;
+    }
+    /* end of animation  */
+    100% {
+      bottom: 90%;
+      right: 30%;
+      opacity: 0%;
+    }
+  }
+}
 @-webkit-keyframes fa-solid {
   /* start of animation */
   0% {
-    bottom: 70%;
+    bottom: 50%;
     right: 70%;
   }
   /* end of animation  */
   100% {
     bottom: 83%;
-    right: 25%;
+    right: 10%;
     opacity: 0%;
   }
 }
-
 @keyframes fa-solid {
   /* start of animation */
   0% {
-    bottom: 70%;
+    bottom: 50%;
     right: 70%;
   }
   /* end of animation  */
   100% {
     bottom: 83%;
-    right: 25%;
+    right: 10%;
     opacity: 0%;
   }
 }
@@ -431,20 +477,4 @@ html {
   font-size: 3rem;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-}
-
-footer {
-  margin-top: 75px;
-}
-
-@media (min-width: 900px) {
-  .wrapper {
-    background-position: center;
-  }
-  .opponent, .user {
-    height: 25vh;
-  }
-  .userName h2, .opponentName h2 {
-    width: 50%;
-  }
 }
