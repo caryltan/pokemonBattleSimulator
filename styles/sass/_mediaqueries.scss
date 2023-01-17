@@ -1,0 +1,28 @@
+@media (min-width:900px){
+    .wrapper{
+        background-position: center;
+        background-position-y: -150px;
+    }
+    .opponent, .user{
+        height: 25vh;
+    };
+    .userName, .opponentName{
+        h2{
+            width: 50%;
+        };
+    };
+    @keyframes fa-solid {
+        /* start of animation */
+        0% {
+            bottom: 50%;
+            right: 70%;
+        }
+        /* end of animation  */
+        100% {
+            bottom: 90%;
+            right: 30%;
+            opacity: 0%;
+        }
+    }
+}
+

@@ -1,0 +1,19 @@
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url(../assets/battlebackground1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: -120px;
+}
+
+html{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'VT323', monospace;
+    font-weight: 400;
+    letter-spacing: 4px;
+}
