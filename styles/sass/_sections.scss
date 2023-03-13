@@ -20,20 +20,21 @@
 .userName {
     flex-basis: 50%;
     h2{
+        width: 50%;
         background-color: white;
         margin: auto;
-        top: 40%;
-        position: relative;
+        position: absolute;
+        right: 5%;
     }
 }
 
 .opponentName {
     flex-basis: 50%;
     h2{
-        background-color: white;
         margin: auto;
-        top: 40%;
-        position: relative;
+        width: 50%;
+        background-color: white;
+        position: absolute;
     }
 }
 
