@@ -280,10 +280,11 @@ html {
       flex-basis: 50%;
 }
 .userName h2 {
+  width: 50%;
   background-color: white;
   margin: auto;
-  top: 40%;
-  position: relative;
+  position: absolute;
+  right: 5%;
 }
 
 .opponentName {
@@ -291,10 +292,10 @@ html {
       flex-basis: 50%;
 }
 .opponentName h2 {
-  background-color: white;
   margin: auto;
-  top: 40%;
-  position: relative;
+  width: 50%;
+  background-color: white;
+  position: absolute;
 }
 
 .userSprite {
@@ -409,9 +410,6 @@ footer {
   }
   .opponent, .user {
     height: 25vh;
-  }
-  .userName h2, .opponentName h2 {
-    width: 50%;
   }
   @-webkit-keyframes fa-solid {
     /* start of animation */
